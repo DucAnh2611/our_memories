@@ -12,6 +12,10 @@ function run() {
 
     AppRoutes(app);
 
+    app.get("/ping", (req, res) => {
+        res.json({ status: "ok" });
+    });
+
     app.listen(AppConfig.port, async () => {
         console.log(`Server running on port ${AppConfig.port}`);
     });
