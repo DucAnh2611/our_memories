@@ -2,6 +2,7 @@ const env = require("../libs/env");
 
 module.exports = {
     port: env.PORT || 3001,
+    url: env.URL || "http://localhost:3001",
     enviroment: env.ENVIROMENT || "dev",
     cors: {
         origin: JSON.parse(env.CORS_ORIGIN || '["*"]') || "*",

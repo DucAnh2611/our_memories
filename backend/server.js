@@ -3,6 +3,7 @@ const { AppConfig } = require("./src/configs");
 const { AppSetupMiddleware } = require("./src/middlewares");
 const { initDB } = require("./src/db");
 const AppRoutes = require("./src/modules");
+const { resetCronJob } = require("./src/jobs");
 
 function run() {
     const app = express();
@@ -17,3 +18,5 @@ function run() {
 }
 
 initDB().then(() => run());
+
+resetCronJob();
