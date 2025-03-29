@@ -1,3 +1,7 @@
+const env = require("../libs/env");
+
+console.log(env);
+
 module.exports = {
     AppConfig: require("./app"),
     CookieConfig: require("./cookie"),
