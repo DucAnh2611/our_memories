@@ -23,4 +23,4 @@ function run() {
 
 initDB().then(() => run());
 
-resetCronJob();
+resetCronJob.start();
